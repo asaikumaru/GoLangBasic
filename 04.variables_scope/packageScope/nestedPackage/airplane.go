@@ -1,3 +1,4 @@
 package nestedPackage
 
-var AirplaneNAME = "AIRBUS"
+var airplaneNAME = "AIRBUS" // локальная переменная
+var AirplaneNAME = "Jet"    // глобальная переменная
