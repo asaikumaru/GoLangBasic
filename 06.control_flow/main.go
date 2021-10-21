@@ -22,7 +22,7 @@ func main() {
 	//default:
 	//	fmt.Println("not ok")
 	//}
-
+	//
 	//switch text {
 	//case "admin":
 	//	fmt.Println("Error not admin")
@@ -37,11 +37,19 @@ func main() {
 	//	fmt.Println("Some login")
 	//}
 
-	for x := 1; x < 100; x++ {
+	//	for z := 2; z > 1; z++ {
+	//
+	//	if z == 100 {
+	//		break
+	//	}
+	//	fmt.Println(z)
+	//}
+
+	for x, y := uint64(1), uint64(2); func() bool { return x < 100 && y < 184467440737095516 }(); func() { x++; y *= x }() {
 		if x%10 == 0 {
 			fmt.Println("%10", x)
-			break
+			continue
 		}
-		fmt.Println(x)
+		fmt.Println(x, y)
 	}
 }

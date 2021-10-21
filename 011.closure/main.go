@@ -33,11 +33,11 @@ func closure() int {
 
 	//z:= t + 10
 
-	second := func() {
-		fmt.Println(t)
+	second := func(x int) {
+		fmt.Println(t + x)
 	}
 	result()
-	second()
+	second(2)
 
 	return t
 
