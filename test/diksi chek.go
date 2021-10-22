@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	var chek = map[string]int{
@@ -12,28 +14,20 @@ func main() {
 		"fassol":      100,
 	}
 
-	numsChek := []int{}
+	numsChek := make([]int, 0, len(chek))
 
-	for i, v := range numsChek {
-		res := 0
-		for a, v2 := range chek {
-
-		}
-		res += v
-		return res
-
+	for _, value := range chek {
+		numsChek = append(numsChek, value)
 	}
 
-	value := calc(chek...)
+	fmt.Println(calc(numsChek...))
 }
 
-func calc(nums ...[]int) int {
+func calc(nums ...int) int {
 	result := 0
 
 	for _, v := range nums {
-		for _, v2 := range v {
-			result += v2
-		}
+		result += v
 	}
 
 	return result
